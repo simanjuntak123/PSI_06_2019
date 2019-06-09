@@ -47,7 +47,9 @@ $fieldOptions3 = [
 </style>
 <div class="site-signup">
     <div class="row">
-        <h1 class="text-center"><b><?= Html::encode($this->title) ?></b> Account Baru</h1>
+        <div class="login-logo animated fadeInDown">
+            <h3>Daftar Account Sistem Informasi Pelacakan Keuangan Program Studi</h3>
+        </div>
         <div id="login-box" class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
             <p id="message" class="text-center small">Daftar agar tetap terhubung</p>
             <?php $form = ActiveForm::begin(['id' => 'form-signup', 'enableClientValidation' => false]); ?>

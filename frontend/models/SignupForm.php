@@ -14,6 +14,7 @@ class SignupForm extends Model
     public $email;
     public $password;
     public $role;
+    public $jabatan;
 
 
     /**
@@ -35,6 +36,9 @@ class SignupForm extends Model
            
             ['role', 'required'],
             ['role', 'integer'],
+
+            ['jabatan', 'required'],
+            ['jabatan', 'string'],
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],

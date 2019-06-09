@@ -19,6 +19,10 @@ $fieldOptions2 = [
     'options' => ['class' => 'form-group has-feedback'],
     'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
 ];
+$fieldOptions3 = [
+    'options' => ['class' => 'form-group has-feedback'],
+    'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
+];
 
 ?>
 <style type="text/css">
@@ -43,7 +47,10 @@ $fieldOptions2 = [
 </style>
 <div class="site-signup">
     <div class="row">
-        <h1 class="text-center"><b><?= Html::encode($this->title) ?></b> Account Baru</h1>
+
+        <div class="login-logo animated fadeInDown">
+            <h3><b>Daftar Account Sistem Informasi Pelacakan Keuangan Program Studi</b></h3>
+        </div>
         <div id="login-box" class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
             <p id="message" class="text-center small">Daftar agar tetap terhubung</p>
             <?php $form = ActiveForm::begin(['id' => 'form-signup', 'enableClientValidation' => false]); ?>
@@ -54,10 +61,12 @@ $fieldOptions2 = [
 
                 <?php $item = ['10' => 'Kaprodi', '20' => 'PIC', '30' => 'Keuangan', '40' => 'Controller', '50' => 'WR2']; ?>
                  <?= $form->field($model, 'role')->dropDownList($item, ['prompt' => '--Pilih Role--']) ?>
+    
+                <?= $form->field($model, 'jabatan', $fieldOptions1)->label(false)->textInput(['placeholder' => $model->getAttributeLabel('jabatan')]) ?>
 
                 <?= $form->field($model, 'password', $fieldOptions2)->label(false)->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
                 
-                <?= $form->field($model, 'password', $fieldOptions2)->label(false)->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
+                <?= $form->field($model, 'password', $fieldOptions3)->label(false)->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
 
 
                 <div class="form-group">
